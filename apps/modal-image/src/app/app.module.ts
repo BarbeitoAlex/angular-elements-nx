@@ -1,13 +1,19 @@
-import { NgModule } from '@angular/core';
+import { DoBootstrap, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { createCustomElement } from '@angular/elements';
 
-import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
-
+import { ModalImageComponent, SharedModule } from '@angular-elements-nx/shared';
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule],
+  declarations: [],
+  imports: [BrowserModule, SharedModule],
   providers: [],
-  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule implements DoBootstrap {
+  constructor(private injector: Injector) {}
+  ngDoBootstrap() {
+    customElements.define(
+      'modal-image',
+      createCustomElement(ModalImageComponent, { injector: this.injector })
+    );
+  }
+}

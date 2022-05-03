@@ -1,0 +1,6 @@
+<img [src]="src" [alt]="alt" (click)="openModal()" />
+
+<div *ngIf="state === 'opened'" class="modal" [style.z-index]="zIndexModal">
+  <span class="close" (click)="closeModal()">&times;</span>
+  <img class="modal-content" [src]="srcModal || src" [alt]="alt" />
+</div>

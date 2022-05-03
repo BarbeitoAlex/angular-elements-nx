@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'modal-image',
+  displayName: 'shared',
   preset: '../../jest.preset.ts',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/modal-image',
+  coverageDirectory: '../../coverage/libs/shared',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

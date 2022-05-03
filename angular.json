@@ -2,6 +2,6 @@
   "version": 2,
   "projects": {
     "modal-image": "apps/modal-image",
-    "modal-image-e2e": "apps/modal-image-e2e"
+    "shared": "libs/shared"
   }
 }

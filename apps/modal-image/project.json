@@ -13,13 +13,7 @@
         "main": "apps/modal-image/src/main.ts",
         "polyfills": "apps/modal-image/src/polyfills.ts",
         "tsConfig": "apps/modal-image/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/modal-image/src/favicon.ico",
-          "apps/modal-image/src/assets"
-        ],
-        "styles": ["apps/modal-image/src/styles.scss"],
-        "scripts": []
+        "inlineStyleLanguage": "scss"
       },
       "configurations": {
         "production": {
@@ -41,7 +35,7 @@
               "with": "apps/modal-image/src/environments/environment.prod.ts"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "none"
         },
         "development": {
           "buildOptimizer": false,
