@@ -1,11 +1,10 @@
 import { DoBootstrap, Injector, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { createCustomElement } from '@angular/elements';
 
 import { ModalImageComponent, SharedModule } from '@angular-elements-nx/shared';
 @NgModule({
   declarations: [],
-  imports: [BrowserModule, SharedModule],
+  imports: [SharedModule],
   providers: [],
 })
 export class AppModule implements DoBootstrap {
